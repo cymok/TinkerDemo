@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO: 当前是否基准包
                 boolean isBaseApk = true;
+//                boolean isBaseApk = false;
                 if (isBaseApk) {
                     Toast.makeText(MainActivity.this, "我是基准包", Toast.LENGTH_SHORT).show();
                 } else {
@@ -56,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
                 //检测是否有权限
                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)
                         != PackageManager.PERMISSION_GRANTED) {
-                    //是否可以再次弹出权限对话框 即用户是否选择了不再提示
+                    //是否选择了不再提示
                     if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQ_CODE);
-                    } else {
                         Toast.makeText(MainActivity.this, "拒绝了权限", Toast.LENGTH_SHORT).show();
+                    } else {
+                        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQ_CODE);
                     }
                 } else {
                     installPatch();

@@ -23,3 +23,6 @@ TINKER_ID
 
 >>修改 `ignoreWarning = false` 为 `ignoreWarning = true`
 
+
+command:
+adb push patch_signed_7zip.apk /sdcard/Android/data/cn.mozhx.tinkerdamo/files/patch_signed_7zip.apk

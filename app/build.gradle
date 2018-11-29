@@ -45,7 +45,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //you must install multiDex whatever tinker is installed!
-    compile "com.android.support:multidex:1.0.3"
+    implementation "com.android.support:multidex:1.0.3"
 
     //tinker的核心库
     implementation("com.tencent.tinker:tinker-android-lib:${TINKER_VERSION}") { changing = true }
@@ -81,7 +81,7 @@ ext {
 
     //oldApk 时间 参考${buildDir}/bakApk/目录下的文件
 //    def oldApkTime = "1129-13-01-21"
-    def oldApkTime = "1129-19-40-07"
+    def oldApkTime = "1130-02-15-26"
 
     //for normal build
     //old apk file to build patch apk
