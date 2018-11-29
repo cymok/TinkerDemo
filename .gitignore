@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+captures/
+*/build/
+
+
+### AndroidStudio Patch ###
+
+!/gradle/wrapper/gradle-wrapper.jar
+
+# End of https://www.gitignore.io/api/androidstudio
+
+/app/apk/
+/app/release/
+
+*.jks
+*.keystore
+sign_config.gradle
+
+.svn/
